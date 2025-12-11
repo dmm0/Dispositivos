@@ -132,6 +132,7 @@ public class PlatillosActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        // Recargar por si se marcó un platillo como preparado y deba desaparecer de alguna lista (si se implementa esa lógica)
         cargarPlatillos();
     }
 }

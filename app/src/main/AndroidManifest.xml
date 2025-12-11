@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PlatillosActivity" />
+        <activity android:name=".DetallePlatilloActivity" />
+        <activity android:name=".AgregarPlatilloActivity" />
+        <activity android:name=".ConsumidosActivity" />
     </application>
 
 </manifest>
