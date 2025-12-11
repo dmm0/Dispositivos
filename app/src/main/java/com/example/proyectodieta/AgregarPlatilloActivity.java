@@ -46,7 +46,7 @@ public class AgregarPlatilloActivity extends AppCompatActivity {
         configurarListaTipoComida();
         configurarListaIngredientes();
 
-        // Listener para el botón de agregar platillo
+        // Listener para el botón
         btnAgregarPlatillo.setOnClickListener(v -> guardarPlatillo());
     }
 

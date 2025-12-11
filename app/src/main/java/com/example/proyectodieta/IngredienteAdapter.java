@@ -17,7 +17,7 @@ public class IngredienteAdapter extends BaseAdapter {
     private Context context;
     private List<Ingrediente> lista;
     private List<Integer> seleccionados = new ArrayList<>();
-    private boolean seleccionHabilitada = true;
+    private boolean seleccionHabilitada = true; // Para deshabilitar la selección en la pantalla de consumidos
 
     public IngredienteAdapter(Context context, List<Ingrediente> lista) {
         this.context = context;
@@ -59,15 +59,16 @@ public class IngredienteAdapter extends BaseAdapter {
 
         nombre.setText(ing.getNombre());
 
+        // Solo aplicar lógica de selección si está habilitada
         if (seleccionHabilitada) {
-            // Cambiar color según si está seleccionado o no
+            // Cambiar color según estado (seleccionado)
             if (seleccionados.contains(ing.getIdIngrediente())) {
-                view.setBackgroundColor(Color.parseColor("#D1FFD1")); // verde
+                view.setBackgroundColor(Color.parseColor("#D1FFD1")); // verde claro
             } else {
                 view.setBackgroundColor(Color.WHITE);
             }
 
-            // Evento del click
+            // Manejo de clic
             view.setOnClickListener(v -> {
                 if (seleccionados.contains(ing.getIdIngrediente())) {
                     seleccionados.remove(Integer.valueOf(ing.getIdIngrediente()));
@@ -81,6 +82,7 @@ public class IngredienteAdapter extends BaseAdapter {
                 notifyDataSetChanged();
             });
         } else {
+            // Si la selección no está habilitada, no hay listener y el fondo es neutro
             view.setBackgroundColor(Color.WHITE);
             view.setOnClickListener(null);
         }

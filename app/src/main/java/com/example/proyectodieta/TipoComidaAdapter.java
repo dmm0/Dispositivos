@@ -14,7 +14,7 @@ public class TipoComidaAdapter extends BaseAdapter {
 
     private Context context;
     private List<String> tiposComida;
-    private int selectedPosition = -1;
+    private int selectedPosition = -1; // -1 indica que no hay nada seleccionado
 
     public TipoComidaAdapter(Context context, List<String> tiposComida) {
         this.context = context;
@@ -59,7 +59,7 @@ public class TipoComidaAdapter extends BaseAdapter {
     // Método para actualizar la selección
     public void setSelectedPosition(int position) {
         selectedPosition = position;
-        notifyDataSetChanged();
+        notifyDataSetChanged(); // Notificar al adapter para que se redibuje
     }
 
     // Método para obtener el tipo de comida seleccionado

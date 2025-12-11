@@ -53,9 +53,9 @@ public class PlatilloAdapter extends BaseAdapter {
 
         // Cambiar color de fondo según el estado del platillo
         if (p.isPreparado()) {
-            view.setBackgroundColor(Color.parseColor("#C8E6C9")); // Verde
+            view.setBackgroundColor(Color.parseColor("#C8E6C9")); // Verde claro
         } else {
-            view.setBackgroundColor(Color.parseColor("#FFF9C4")); // Amarillo
+            view.setBackgroundColor(Color.parseColor("#FFF9C4")); // Amarillo claro
         }
 
         return view;
