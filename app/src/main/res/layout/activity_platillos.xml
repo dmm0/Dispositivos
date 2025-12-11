@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nombre de la dieta -->
+    <TextView
+        android:id="@+id/txtNombreDieta"
+        android:text="Nombre de la Dieta"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Fecha -->
+    <TextView
+        android:id="@+id/txtFechaPlatillos"
+        android:text="Fecha actual"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Botones de selección de comida -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btnDesayuno"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Desayuno"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnAlmuerzo"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Almuerzo"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnComida"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Comida"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnColacion"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Colación"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnCena"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Cena"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- Lista de platillos -->
+    <ListView
+        android:id="@+id/listPlatillos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="10dp" />
+
+    <!-- Botones inferiores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnVerConsumidos"
+            android:text="Ingredientes Usados"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnAgregarPlatillo"
+            android:text="Agregar Platillo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

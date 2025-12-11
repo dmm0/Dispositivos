@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/txtTituloAgregar"
+        android:text="Añadir Platillo"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/txtNombreLabel"
+        android:text="Nombre:"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editNombrePlatillo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Escribe el nombre del platillo"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        android:maxLength="50" />
+
+    <!-- Selección de tipo de comida -->
+    <TextView
+        android:id="@+id/txtTipoComidaLabel"
+        android:text="Tipo de comida:"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/listTipoComida"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:dividerHeight="8dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Ingredientes -->
+    <TextView
+        android:id="@+id/txtIngredientesDisponibles"
+        android:text="Ingredientes disponibles:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <ListView
+        android:id="@+id/listIngredientesDisponibles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"/>
+
+    <!-- Botón -->
+    <Button
+        android:id="@+id/btnAgregarPlatillo"
+        android:text="Añadir Platillo"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
